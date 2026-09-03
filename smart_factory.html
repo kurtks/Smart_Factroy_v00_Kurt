@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART FACTORY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <div class="logo-box">SF</div>
+
+            <div class="logo-text">
+                <strong>SMART FACTORY</strong>
+                <span>Manufacturing System</span>
+            </div>
+        </div>
+
+
+        <nav class="navigation">
+
+            <button class="menu-item active" data-page="overview">
+                <span class="menu-icon">⌂</span>
+                <span>Overview</span>
+            </button>
+
+            <button class="menu-item" data-page="production">
+                <span class="menu-icon">▥</span>
+                <span>Production</span>
+            </button>
+
+            <button class="menu-item" data-page="oee">
+                <span class="menu-icon">◉</span>
+                <span>OEE</span>
+            </button>
+
+            <button class="menu-item" data-page="machines">
+                <span class="menu-icon">▣</span>
+                <span>Machines</span>
+            </button>
+
+            <button class="menu-item" data-page="quality">
+                <span class="menu-icon">✓</span>
+                <span>Quality</span>
+            </button>
+
+            <button class="menu-item" data-page="maintenance">
+                <span class="menu-icon">⚒</span>
+                <span>Maintenance</span>
+            </button>
+
+
+            <div class="menu-line"></div>
+
+
+            <button class="menu-item" data-page="reports">
+                <span class="menu-icon">▤</span>
+                <span>Reports</span>
+            </button>
+
+            <button class="menu-item" data-page="settings">
+                <span class="menu-icon">⚙</span>
+                <span>Settings</span>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <span class="online-dot"></span>
+            <span>System Online</span>
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="mobile-logo">
+                SMART FACTORY
+            </div>
+
+            <div class="header-right">
+
+                <button class="notification">
+                    🔔
+                    <span>3</span>
+                </button>
+
+                <div class="user-area">
+
+                    <div class="avatar">A</div>
+
+                    <div class="user-info">
+                        <strong>Admin</strong>
+                        <span>관리자</span>
+                    </div>
+
+                </div>
+
+                <div class="datetime">
+                    <span id="current-date">2026-09-02</span>
+                    <strong id="current-time">20:54</strong>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <!-- =========================
+                 OVERVIEW PAGE
+            ========================== -->
+            <section class="page active-page" id="overview">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h1>Factory Overview</h1>
+                        <p>
+                            공장 전체의 생산 현황과 주요 설비 상태를 한눈에 확인할 수 있습니다.
+                        </p>
+                    </div>
+
+                    <button class="primary-button">
+                        + Production Report
+                    </button>
+
+                </div>
+
+
+                <!-- KPI -->
+                <div class="kpi-grid">
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-header">
+                            <span>OEE</span>
+                            <div class="kpi-symbol blue">◉</div>
+                        </div>
+
+                        <div class="kpi-value">
+                            87.4%
+                        </div>
+
+                        <div class="kpi-change up">
+                            ▲ 2.4%
+                            <span>전일 대비</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-header">
+                            <span>Production</span>
+                            <div class="kpi-symbol purple">▥</div>
+                        </div>
+
+                        <div class="kpi-value">
+                            12,480
+                        </div>
+
+                        <div class="kpi-change up">
+                            ▲ 5.8%
+                            <span>전일 대비</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-header">
+                            <span>Quality</span>
+                            <div class="kpi-symbol green">✓</div>
+                        </div>
+
+                        <div class="kpi-value">
+                            98.2%
+                        </div>
+
+                        <div class="kpi-change up">
+                            ▲ 0.7%
+                            <span>전일 대비</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-header">
+                            <span>Downtime</span>
+                            <div class="kpi-symbol orange">◷</div>
+                        </div>
+
+                        <div class="kpi-value">
+                            42 <small>min</small>
+                        </div>
+
+                        <div class="kpi-change down">
+                            ▼ 12 min
+                            <span>전일 대비</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHART + LINE STATUS -->
+                <div class="two-column">
+
+                    <!-- Production Trend -->
+                    <div class="panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <h2>Production Trend</h2>
+                                <p>최근 24시간 생산량 추이</p>
+                            </div>
+
+                            <select class="select-box">
+                                <option>Today</option>
+                                <option>Yesterday</option>
+                                <option>This Week</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="chart">
+
+                            <div class="chart-y">
+                                <span>800</span>
+                                <span>600</span>
+                                <span>400</span>
+                                <span>200</span>
+                                <span>0</span>
+                            </div>
+
+
+                            <div class="chart-body">
+
+                                <div class="chart-grid grid-1"></div>
+                                <div class="chart-grid grid-2"></div>
+                                <div class="chart-grid grid-3"></div>
+                                <div class="chart-grid grid-4"></div>
+
+
+                                <svg
+                                    viewBox="0 0 700 250"
+                                    preserveAspectRatio="none"
+                                    class="chart-svg">
+
+                                    <defs>
+
+                                        <linearGradient
+                                            id="chartGradient"
+                                            x1="0"
+                                            y1="0"
+                                            x2="0"
+                                            y2="1">
+
+                                            <stop
+                                                offset="0%"
+                                                stop-color="#2563eb"
+                                                stop-opacity="0.22"/>
+
+                                            <stop
+                                                offset="100%"
+                                                stop-color="#2563eb"
+                                                stop-opacity="0"/>
+
+                                        </linearGradient>
+
+                                    </defs>
+
+
+                                    <path
+                                        d="
+                                        M0 190
+                                        C45 170 65 180 100 145
+                                        S165 90 205 125
+                                        S260 170 305 110
+                                        S360 75 405 105
+                                        S465 155 510 85
+                                        S575 50 615 92
+                                        S665 105 700 48
+                                        L700 250
+                                        L0 250
+                                        Z"
+                                        fill="url(#chartGradient)"
+                                    />
+
+
+                                    <path
+                                        d="
+                                        M0 190
+                                        C45 170 65 180 100 145
+                                        S165 90 205 125
+                                        S260 170 305 110
+                                        S360 75 405 105
+                                        S465 155 510 85
+                                        S575 50 615 92
+                                        S665 105 700 48"
+                                        fill="none"
+                                        stroke="#2563eb"
+                                        stroke-width="3"
+                                    />
+
+                                </svg>
+
+
+                                <div class="chart-x">
+                                    <span>00:00</span>
+                                    <span>06:00</span>
+                                    <span>12:00</span>
+                                    <span>18:00</span>
+                                    <span>24:00</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Line Status -->
+                    <div class="panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <h2>Line Status</h2>
+                                <p>현재 생산라인 운영 상태</p>
+                            </div>
+
+                            <button
+                                class="text-button"
+                                data-page-link="machines">
+                                View All
+                            </button>
+
+                        </div>
+
+
+                        <div class="line-list">
+
+                            <div class="line-row">
+
+                                <div class="line-info">
+                                    <strong>LINE 01</strong>
+                                    <span>자동 조립 생산라인</span>
+                                </div>
+
+                                <span class="status running">
+                                    ● RUN
+                                </span>
+
+                            </div>
+
+
+                            <div class="line-row">
+
+                                <div class="line-info">
+                                    <strong>LINE 02</strong>
+                                    <span>정밀 가공 생산라인</span>
+                                </div>
+
+                                <span class="status running">
+                                    ● RUN
+                                </span>
+
+                            </div>
+
+
+                            <div class="line-row">
+
+                                <div class="line-info">
+                                    <strong>LINE 03</strong>
+                                    <span>전자 부품 생산라인</span>
+                                </div>
+
+                                <span class="status idle">
+                                    ● IDLE
+                                </span>
+
+                            </div>
+
+
+                            <div class="line-row">
+
+                                <div class="line-info">
+                                    <strong>LINE 04</strong>
+                                    <span>CNC 가공 생산라인</span>
+                                </div>
+
+                                <span class="status stopped">
+                                    ● DOWN
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ALERT + SUMMARY -->
+                <div class="two-column bottom">
+
+                    <!-- Alerts -->
+                    <div class="panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <h2>Active Alerts</h2>
+                                <p>현재 확인이 필요한 알림입니다.</p>
+                            </div>
+
+                            <span class="alert-badge">
+                                3 Alerts
+                            </span>
+
+                        </div>
+
+
+                        <div class="alert-list">
+
+                            <div class="alert-row">
+
+                                <div class="alert-icon red">
+                                    !
+                                </div>
+
+                                <div class="alert-content">
+                                    <strong>CNC-04 abnormal temperature</strong>
+                                    <p>
+                                        CNC-04 설비의 온도가 기준값을 초과했습니다.
+                                    </p>
+                                </div>
+
+                                <span class="alert-time">
+                                    2 min ago
+                                </span>
+
+                            </div>
+
+
+                            <div class="alert-row">
+
+                                <div class="alert-icon yellow">
+                                    !
+                                </div>
+
+                                <div class="alert-content">
+                                    <strong>Line 03 material shortage</strong>
+                                    <p>
+                                        Line 03의 원자재 재고가 부족합니다.
+                                    </p>
+                                </div>
+
+                                <span class="alert-time">
+                                    12 min ago
+                                </span>
+
+                            </div>
+
+
+                            <div class="alert-row">
+
+                                <div class="alert-icon blue">
+                                    i
+                                </div>
+
+                                <div class="alert-content">
+                                    <strong>Maintenance scheduled</strong>
+                                    <p>
+                                        Press-02 정기점검이 오늘 22:00에 예정되어 있습니다.
+                                    </p>
+                                </div>
+
+                                <span class="alert-time">
+                                    30 min ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Summary -->
+                    <div class="panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <h2>Factory Summary</h2>
+                                <p>금일 공장 운영 요약</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <div class="summary-label">
+                                <span>Operating Lines</span>
+                                <strong>3 / 4</strong>
+                            </div>
+
+                            <div class="progress">
+                                <span style="width:75%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <div class="summary-label">
+                                <span>Machine Utilization</span>
+                                <strong>91.6%</strong>
+                            </div>
+
+                            <div class="progress purple">
+                                <span style="width:91.6%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <div class="summary-label">
+                                <span>Quality Target</span>
+                                <strong>98.2%</strong>
+                            </div>
+
+                            <div class="progress green">
+                                <span style="width:98.2%"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 OTHER PAGES
+            ========================== -->
+
+            <section class="page" id="production">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Production</h1>
+                        <p>생산라인별 생산량과 작업 진행 현황을 확인합니다.</p>
+                    </div>
+                </div>
+
+                <div class="kpi-grid">
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span>Today's Production</span>
+                        </div>
+                        <div class="kpi-value">12,480</div>
+                        <div class="kpi-change up">▲ 5.8% <span>전일 대비</span></div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span>Target</span>
+                        </div>
+                        <div class="kpi-value">14,000</div>
+                        <div class="kpi-change">달성률 89.1%</div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span>Running Lines</span>
+                        </div>
+                        <div class="kpi-value">3 / 4</div>
+                        <div class="kpi-change">1개 라인 생산 대기</div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span>Efficiency</span>
+                        </div>
+                        <div class="kpi-value">92.4%</div>
+                        <div class="kpi-change up">▲ 1.2%</div>
+                    </div>
+
+                </div>
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Production Lines</h2>
+                            <p>현재 생산라인별 작업 현황입니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="line-list">
+
+                        <div class="line-row">
+                            <div class="line-info">
+                                <strong>LINE 01</strong>
+                                <span>오늘 생산량 4,120 / 목표 4,500</span>
+                            </div>
+                            <span class="status running">● RUN</span>
+                        </div>
+
+                        <div class="line-row">
+                            <div class="line-info">
+                                <strong>LINE 02</strong>
+                                <span>오늘 생산량 3,860 / 목표 4,000</span>
+                            </div>
+                            <span class="status running">● RUN</span>
+                        </div>
+
+                        <div class="line-row">
+                            <div class="line-info">
+                                <strong>LINE 03</strong>
+                                <span>자재 부족으로 생산 대기 중</span>
+                            </div>
+                            <span class="status idle">● IDLE</span>
+                        </div>
+
+                        <div class="line-row">
+                            <div class="line-info">
+                                <strong>LINE 04</strong>
+                                <span>CNC-04 설비 이상으로 생산 중단</span>
+                            </div>
+                            <span class="status stopped">● DOWN</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="page" id="oee">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>OEE</h1>
+                        <p>설비종합효율을 기준으로 공장 운영 효율을 분석합니다.</p>
+                    </div>
+                </div>
+
+                <div class="kpi-grid">
+
+                    <div class="kpi-card">
+                        <div class="kpi-header"><span>OEE</span></div>
+                        <div class="kpi-value">87.4%</div>
+                        <div class="kpi-change up">▲ 2.4%</div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header"><span>Availability</span></div>
+                        <div class="kpi-value">94.1%</div>
+                        <div class="kpi-change up">▲ 1.1%</div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header"><span>Performance</span></div>
+                        <div class="kpi-value">92.8%</div>
+                        <div class="kpi-change up">▲ 0.8%</div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header"><span>Quality</span></div>
+                        <div class="kpi-value">98.2%</div>
+                        <div class="kpi-change up">▲ 0.7%</div>
+                    </div>
+
+                </div>
+
+                <div class="panel empty-panel">
+                    <div class="large-number">87.4%</div>
+                    <h2>Overall Equipment Effectiveness</h2>
+                    <p>현재 공장의 설비종합효율은 목표값 85%를 상회하고 있습니다.</p>
+                </div>
+
+            </section>
+
+
+            <section class="page" id="machines">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Machines</h1>
+                        <p>주요 생산설비의 현재 상태와 운영 현황을 확인합니다.</p>
+                    </div>
+                </div>
+
+                <div class="machine-grid">
+
+                    <div class="machine-card">
+                        <span class="machine-status run">RUNNING</span>
+                        <h3>CNC-01</h3>
+                        <p>정밀 가공 설비</p>
+                        <strong>94.2%</strong>
+                        <small>가동률</small>
+                    </div>
+
+                    <div class="machine-card">
+                        <span class="machine-status run">RUNNING</span>
+                        <h3>PRESS-02</h3>
+                        <p>프레스 생산 설비</p>
+                        <strong>91.8%</strong>
+                        <small>가동률</small>
+                    </div>
+
+                    <div class="machine-card">
+                        <span class="machine-status idle-status">IDLE</span>
+                        <h3>ROBOT-03</h3>
+                        <p>자동 조립 로봇</p>
+                        <strong>78.4%</strong>
+                        <small>가동률</small>
+                    </div>
+
+                    <div class="machine-card">
+                        <span class="machine-status down-status">DOWN</span>
+                        <h3>CNC-04</h3>
+                        <p>정밀 가공 설비</p>
+                        <strong>0%</strong>
+                        <small>가동률</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="page" id="quality">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Quality</h1>
+                        <p>제품 품질 지표와 불량 현황을 확인합니다.</p>
+                    </div>
+                </div>
+
+                <div class="kpi-grid">
+
+                    <div class="kpi-card">
+                        <div class="kpi-header"><span>Quality Rate</span></div>
+                        <div class="kpi-value">98.2%</div>
+                        <div class="kpi-change up">▲ 0.7%</div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header"><span>Defect Rate</span></div>
+                        <div class="kpi-value">1.8%</div>
+                        <div class="kpi-change down">▼ 0.7%</div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header"><span>Inspected</span></div>
+                        <div class="kpi-value">12,720</div>
+                        <div class="kpi-change">금일 검사 수량</div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header"><span>Rejected</span></div>
+                        <div class="kpi-value">229</div>
+                        <div class="kpi-change">불량 제품</div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="page" id="maintenance">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Maintenance</h1>
+                        <p>설비 점검 일정과 유지보수 작업을 관리합니다.</p>
+                    </div>
+                </div>
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Maintenance Schedule</h2>
+                            <p>예정된 설비 점검 및 유지보수 작업입니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="maintenance-list">
+
+                        <div class="maintenance-row">
+                            <strong>Press-02</strong>
+                            <span>정기 점검</span>
+                            <b>22:00</b>
+                        </div>
+
+                        <div class="maintenance-row">
+                            <strong>CNC-04</strong>
+                            <span>온도 센서 점검</span>
+                            <b class="danger-text">긴급</b>
+                        </div>
+
+                        <div class="maintenance-row">
+                            <strong>Robot-03</strong>
+                            <span>윤활 작업</span>
+                            <b>내일 09:00</b>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="page" id="reports">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Reports</h1>
+                        <p>생산 및 설비 운영 데이터를 리포트 형태로 확인합니다.</p>
+                    </div>
+                </div>
+
+                <div class="report-grid">
+
+                    <div class="report-card">
+                        <span>DAILY</span>
+                        <h3>Daily Production Report</h3>
+                        <p>일일 생산량 및 생산성 분석 보고서</p>
+                        <button>View Report</button>
+                    </div>
+
+                    <div class="report-card">
+                        <span>WEEKLY</span>
+                        <h3>Weekly OEE Report</h3>
+                        <p>주간 설비종합효율 분석 보고서</p>
+                        <button>View Report</button>
+                    </div>
+
+                    <div class="report-card">
+                        <span>QUALITY</span>
+                        <h3>Quality Report</h3>
+                        <p>제품 품질 및 불량률 분석 보고서</p>
+                        <button>View Report</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="page" id="settings">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Settings</h1>
+                        <p>스마트 팩토리 시스템의 기본 환경을 설정합니다.</p>
+                    </div>
+                </div>
+
+                <div class="panel settings-panel">
+
+                    <div class="setting-row">
+                        <div>
+                            <strong>Factory Name</strong>
+                            <p>공장 이름을 설정합니다.</p>
+                        </div>
+
+                        <input type="text" value="Smart Factory">
+                    </div>
+
+                    <div class="setting-row">
+                        <div>
+                            <strong>Notification</strong>
+                            <p>설비 이상 알림을 활성화합니다.</p>
+                        </div>
+
+                        <div class="toggle active"></div>
+                    </div>
+
+                    <div class="setting-row">
+                        <div>
+                            <strong>Auto Refresh</strong>
+                            <p>대시보드 데이터를 자동으로 갱신합니다.</p>
+                        </div>
+
+                        <div class="toggle active"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    /* =========================
+       MENU PAGE CHANGE
+    ========================== */
+
+    const menuItems = document.querySelectorAll(".menu-item");
+    const pages = document.querySelectorAll(".page");
+
+    menuItems.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            const pageName = item.dataset.page;
+
+            menuItems.forEach(menu => {
+                menu.classList.remove("active");
+            });
+
+            item.classList.add("active");
+
+            pages.forEach(page => {
+                page.classList.remove("active-page");
+            });
+
+            const targetPage = document.getElementById(pageName);
+
+            if (targetPage) {
+                targetPage.classList.add("active-page");
+            }
+
+        });
+
+    });
+
+
+    /* =========================
+       VIEW ALL
+    ========================== */
+
+    const pageLinks = document.querySelectorAll("[data-page-link]");
+
+    pageLinks.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const target = button.dataset.pageLink;
+
+            menuItems.forEach(menu => {
+                menu.classList.remove("active");
+
+                if (menu.dataset.page === target) {
+                    menu.classList.add("active");
+                }
+            });
+
+            pages.forEach(page => {
+                page.classList.remove("active-page");
+            });
+
+            document.getElementById(target).classList.add("active-page");
+
+        });
+
+    });
+
+
+    /* =========================
+       DATE / CLOCK
+    ========================== */
+
+    function updateDateTime() {
+
+        const now = new Date();
+
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const day = String(now.getDate()).padStart(2, "0");
+
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+
+        document.getElementById("current-date").textContent =
+            `${year}-${month}-${day}`;
+
+        document.getElementById("current-time").textContent =
+            `${hours}:${minutes}`;
+    }
+
+    updateDateTime();
+
+    setInterval(updateDateTime, 1000);
+
+</script>
+
+</body>
+</html>
